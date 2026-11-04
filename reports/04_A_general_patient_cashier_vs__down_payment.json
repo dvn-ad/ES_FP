@@ -1,0 +1,1450 @@
+{
+  "mode": "A",
+  "reference": {
+    "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+    "name": "General patient cashier",
+    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/58.Mini hospital (cashier).General patient cashier/Diagram 1.xpdl",
+    "format": "xpdl",
+    "pool": "General patient cashier",
+    "stats": {
+      "nodes": 22,
+      "edges": 23,
+      "tasks": 16,
+      "gateways": 4,
+      "events": 2,
+      "lanes": 2
+    }
+  },
+  "variant": {
+    "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+    "name": "Down payment",
+    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/59.Mini hospital (cashier).Down payment/Diagram 1.xpdl",
+    "format": "xpdl",
+    "pool": "Down payment",
+    "stats": {
+      "nodes": 15,
+      "edges": 17,
+      "tasks": 7,
+      "gateways": 6,
+      "events": 2,
+      "lanes": 2
+    }
+  },
+  "alignment": {
+    "counts": {
+      "identical": 7,
+      "synonym": 4,
+      "meaning_changed": 2,
+      "unmatched": 11,
+      "matched": 13,
+      "needs_review": 1
+    },
+    "pairs": [
+      {
+        "a": "Selects a save button",
+        "b": "Selects a save button",
+        "label": "identical",
+        "score": 1.0,
+        "reason": "exact normalised label",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "5a51b47a-2646-4727-bfe8-11cb6cf8135a",
+        "b_id": "e024b86e-10e6-46f3-891a-4cf17601323b"
+      },
+      {
+        "a": "Saves the Transaction",
+        "b": "Saves the Down Payment information",
+        "label": "synonym",
+        "score": 0.861,
+        "reason": "string 0.86",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "5347b8df-2a52-44ed-9503-4f9b9d6a5243",
+        "b_id": "2235724b-6ca2-46d2-95a0-ab88837d316f"
+      },
+      {
+        "a": "Wants to make a general patient payment",
+        "b": "Wants to make a Down Payment transaction",
+        "label": "synonym",
+        "score": 0.856,
+        "reason": "token overlap 0.44, string 0.89, sequence 0.63",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+        "b_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7"
+      },
+      {
+        "a": "Displays the price",
+        "b": "Displays patient information",
+        "label": "synonym",
+        "score": 0.834,
+        "reason": "string 0.83",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "eb1c9f06-7a54-4aff-91bb-e0594c6b655a",
+        "b_id": "259b95ad-426d-4d16-8f7b-6371212aaf57"
+      },
+      {
+        "a": "Displays it to the table",
+        "b": "Displays Down Payment transaction form",
+        "label": "synonym",
+        "score": 0.8,
+        "reason": "string 0.80",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "2235724b-6ca2-46d2-95a0-ab88837d316f",
+        "b_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+      },
+      {
+        "a": "Saves the Transaction",
+        "b": "Searches for patients by register number",
+        "label": "meaning_changed",
+        "score": 0.703,
+        "reason": "string 0.70",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "89298069-ad05-4a3d-983b-b4c085ac8852",
+        "b_id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33"
+      },
+      {
+        "a": "Enters the transaction code, transaction type, quantity",
+        "b": "Enters Down Payment information",
+        "label": "meaning_changed",
+        "score": 0.581,
+        "reason": "token overlap 0.29, string 0.81, sequence 0.36",
+        "confidence": "low",
+        "needs_review": true,
+        "llm_reason": "",
+        "a_id": "e024b86e-10e6-46f3-891a-4cf17601323b",
+        "b_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde"
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "score": 0.74,
+        "reason": "structural context 0.50, degree 1.00",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "05603d03-8106-47d8-a069-8e37915278b5",
+        "b_id": "6bc7314b-ee04-4f16-af27-1f79dcebf3d1"
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "score": 0.627,
+        "reason": "structural context 0.33, degree 1.00",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "9cecd4c0-b94d-457c-99d3-52cc97ee020f",
+        "b_id": "d92e9b2e-6bb6-4a70-b633-1a4bc7e585f5"
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "score": 0.4,
+        "reason": "structural context 0.00, degree 1.00",
+        "confidence": "medium",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "6bc7314b-ee04-4f16-af27-1f79dcebf3d1",
+        "b_id": "bbcb1d0b-dfd5-4096-9ba9-da46d77fd192"
+      },
+      {
+        "a": "<start event>",
+        "b": "<start event>",
+        "label": "identical",
+        "score": 0.4,
+        "reason": "structural context 0.00, degree 1.00",
+        "confidence": "medium",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "92cb515c-ae81-4364-a587-772f1bcc50f5",
+        "b_id": "92cb515c-ae81-4364-a587-772f1bcc50f5"
+      },
+      {
+        "a": "<end event>",
+        "b": "<end event>",
+        "label": "identical",
+        "score": 0.4,
+        "reason": "structural context 0.00, degree 1.00",
+        "confidence": "medium",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "b210868a-cf5c-4157-b86e-b21d426d3851",
+        "b_id": "b210868a-cf5c-4157-b86e-b21d426d3851"
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "score": 0.4,
+        "reason": "structural context 0.00, degree 1.00",
+        "confidence": "medium",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "e06571e0-a23d-405d-9bde-427856a91d60",
+        "b_id": "5d54bd1c-b17e-4a4d-8364-237334e4b181"
+      },
+      {
+        "a": "Displays a general patient payment form",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+      },
+      {
+        "a": "Enter the medical record ID",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde"
+      },
+      {
+        "a": "Displays the query results",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "259b95ad-426d-4d16-8f7b-6371212aaf57"
+      },
+      {
+        "a": "Reads the Patient and Registration Database",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33"
+      },
+      {
+        "a": "Chooses the type of payment",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "467aec19-4802-4dfb-959a-96d262adf979"
+      },
+      {
+        "a": "Reads the Transaction Master database",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "883fd3b8-cdea-4fa5-bf5a-c8924b712021"
+      },
+      {
+        "a": "Adds it to the list",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "b8597b55-b0fd-4a78-8049-693d8d2203c7"
+      },
+      {
+        "a": "Selects an add button",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "65aaccf1-8026-4183-bb2c-7a5746f87b67"
+      },
+      {
+        "a": "Prints the transaction to the printer",
+        "b": null,
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "a_id": "691d30ec-9bd8-420f-afc5-26b933f76c01"
+      },
+      {
+        "a": null,
+        "b": "<exclusive gateway (XOR)>",
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "b_id": "7a3f28d2-8c48-4551-9672-ee6753bda510"
+      },
+      {
+        "a": null,
+        "b": "<exclusive gateway (XOR)>",
+        "label": "unmatched",
+        "score": 0.0,
+        "reason": "",
+        "confidence": "high",
+        "needs_review": false,
+        "llm_reason": "",
+        "b_id": "05603d03-8106-47d8-a069-8e37915278b5"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+        "name": "Enter the medical record ID",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "259b95ad-426d-4d16-8f7b-6371212aaf57",
+        "name": "Displays the query results",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "467aec19-4802-4dfb-959a-96d262adf979",
+        "name": "Chooses the type of payment",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "65aaccf1-8026-4183-bb2c-7a5746f87b67",
+        "name": "Selects an add button",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "691d30ec-9bd8-420f-afc5-26b933f76c01",
+        "name": "Prints the transaction to the printer",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "883fd3b8-cdea-4fa5-bf5a-c8924b712021",
+        "name": "Reads the Transaction Master database",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "b8597b55-b0fd-4a78-8049-693d8d2203c7",
+        "name": "Adds it to the list",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+        "name": "Displays a general patient payment form",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE",
+      "element": "node",
+      "before": {
+        "id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33",
+        "name": "Reads the Patient and Registration Database",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": null,
+      "detail": "removed task",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT",
+      "element": "node",
+      "before": null,
+      "after": {
+        "id": "05603d03-8106-47d8-a069-8e37915278b5",
+        "name": "<exclusive gateway (XOR)>",
+        "kind": "xor",
+        "kind_label": "exclusive gateway (XOR)",
+        "lane": "System"
+      },
+      "detail": "added exclusive gateway (XOR)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT",
+      "element": "node",
+      "before": null,
+      "after": {
+        "id": "7a3f28d2-8c48-4551-9672-ee6753bda510",
+        "name": "<exclusive gateway (XOR)>",
+        "kind": "xor",
+        "kind_label": "exclusive gateway (XOR)",
+        "lane": "System"
+      },
+      "detail": "added exclusive gateway (XOR)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "2235724b-6ca2-46d2-95a0-ab88837d316f",
+        "name": "Displays it to the table",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": {
+        "id": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+        "name": "Displays Down Payment transaction form",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "detail": "\"Displays it to the table\" -> \"Displays Down Payment transaction form\"",
+      "label": "synonym",
+      "score": 0.8,
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "5347b8df-2a52-44ed-9503-4f9b9d6a5243",
+        "name": "Saves the Transaction",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": {
+        "id": "2235724b-6ca2-46d2-95a0-ab88837d316f",
+        "name": "Saves the Down Payment information",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "detail": "\"Saves the Transaction\" -> \"Saves the Down Payment information\"",
+      "label": "synonym",
+      "score": 0.861,
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "89298069-ad05-4a3d-983b-b4c085ac8852",
+        "name": "Saves the Transaction",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": {
+        "id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33",
+        "name": "Searches for patients by register number",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "detail": "\"Saves the Transaction\" -> \"Searches for patients by register number\"",
+      "label": "meaning_changed",
+      "score": 0.703,
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+        "name": "Wants to make a general patient payment",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "after": {
+        "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+        "name": "Wants to make a Down Payment transaction",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "detail": "\"Wants to make a general patient payment\" -> \"Wants to make a Down Payment transaction\"",
+      "label": "synonym",
+      "score": 0.856,
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "e024b86e-10e6-46f3-891a-4cf17601323b",
+        "name": "Enters the transaction code, transaction type, quantity",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "after": {
+        "id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+        "name": "Enters Down Payment information",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "Cashier"
+      },
+      "detail": "\"Enters the transaction code, transaction type, quantity\" -> \"Enters Down Payment information\"",
+      "label": "meaning_changed",
+      "score": 0.581,
+      "confidence": "low",
+      "needs_review": true
+    },
+    {
+      "op": "RENAME",
+      "element": "node",
+      "before": {
+        "id": "eb1c9f06-7a54-4aff-91bb-e0594c6b655a",
+        "name": "Displays the price",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "after": {
+        "id": "259b95ad-426d-4d16-8f7b-6371212aaf57",
+        "name": "Displays patient information",
+        "kind": "task",
+        "kind_label": "task",
+        "lane": "System"
+      },
+      "detail": "\"Displays the price\" -> \"Displays patient information\"",
+      "label": "synonym",
+      "score": 0.834,
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE_FLOW",
+      "element": "flow",
+      "before": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "<end event>",
+        "source_id": "e06571e0-a23d-405d-9bde-427856a91d60",
+        "target_id": "b210868a-cf5c-4157-b86e-b21d426d3851"
+      },
+      "after": null,
+      "detail": "flow removed (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE_FLOW",
+      "element": "flow",
+      "before": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "Saves the Transaction",
+        "source_id": "9cecd4c0-b94d-457c-99d3-52cc97ee020f",
+        "target_id": "89298069-ad05-4a3d-983b-b4c085ac8852"
+      },
+      "after": null,
+      "detail": "flow removed (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE_FLOW",
+      "element": "flow",
+      "before": {
+        "source": "Enters the transaction code, transaction type, quantity",
+        "target": "Displays the price",
+        "source_id": "e024b86e-10e6-46f3-891a-4cf17601323b",
+        "target_id": "eb1c9f06-7a54-4aff-91bb-e0594c6b655a"
+      },
+      "after": null,
+      "detail": "flow removed (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "DELETE_FLOW",
+      "element": "flow",
+      "before": {
+        "source": "Saves the Transaction",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "5347b8df-2a52-44ed-9503-4f9b9d6a5243",
+        "target_id": "e06571e0-a23d-405d-9bde-427856a91d60"
+      },
+      "after": null,
+      "detail": "flow removed (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "<end event>",
+        "source_id": "05603d03-8106-47d8-a069-8e37915278b5",
+        "target_id": "b210868a-cf5c-4157-b86e-b21d426d3851"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "5d54bd1c-b17e-4a4d-8364-237334e4b181",
+        "target_id": "6bc7314b-ee04-4f16-af27-1f79dcebf3d1"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "7a3f28d2-8c48-4551-9672-ee6753bda510",
+        "target_id": "5d54bd1c-b17e-4a4d-8364-237334e4b181"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "d92e9b2e-6bb6-4a70-b633-1a4bc7e585f5",
+        "target_id": "05603d03-8106-47d8-a069-8e37915278b5"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "<exclusive gateway (XOR)>",
+        "target": "Displays patient information",
+        "source_id": "7a3f28d2-8c48-4551-9672-ee6753bda510",
+        "target_id": "259b95ad-426d-4d16-8f7b-6371212aaf57"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Displays Down Payment transaction form",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+        "target_id": "bbcb1d0b-dfd5-4096-9ba9-da46d77fd192"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Displays patient information",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "259b95ad-426d-4d16-8f7b-6371212aaf57",
+        "target_id": "5d54bd1c-b17e-4a4d-8364-237334e4b181"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Enters Down Payment information",
+        "target": "Searches for patients by register number",
+        "source_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+        "target_id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Saves the Down Payment information",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "2235724b-6ca2-46d2-95a0-ab88837d316f",
+        "target_id": "05603d03-8106-47d8-a069-8e37915278b5"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Searches for patients by register number",
+        "target": "<exclusive gateway (XOR)>",
+        "source_id": "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33",
+        "target_id": "7a3f28d2-8c48-4551-9672-ee6753bda510"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "op": "INSERT_FLOW",
+      "element": "flow",
+      "before": null,
+      "after": {
+        "source": "Wants to make a Down Payment transaction",
+        "target": "Displays Down Payment transaction form",
+        "source_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+        "target_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+      },
+      "detail": "flow added (1x)",
+      "label": "unmatched",
+      "confidence": "high",
+      "needs_review": false
+    }
+  ],
+  "behavior": {
+    "equivalent": false,
+    "inconclusive": false,
+    "method": "trace_equivalence (tau-closure + subset construction)",
+    "counterexample": {
+      "direction": "reference_only",
+      "trace": [
+        "Wants to make a general patient payment",
+        "Displays a general patient payment form",
+        "Enter the medical record ID",
+        "Reads the Patient and Registration Database",
+        "Displays the query results",
+        "Chooses the type of payment",
+        "Reads the Transaction Master database",
+        "Enters the transaction code, transaction type, quantity",
+        "Displays the price",
+        "Adds it to the list",
+        "Displays it to the table",
+        "Selects an add button",
+        "Selects a save button",
+        "Saves the Transaction"
+      ],
+      "detail": "only this model can execute the differing task and still complete"
+    },
+    "dfa_states": {
+      "reference": 16,
+      "variant": 8
+    },
+    "truncated": false,
+    "reference_lts": {
+      "states": 23,
+      "transitions": 24,
+      "final_states": 1,
+      "deadlock_states": 0,
+      "truncated": false
+    },
+    "variant_lts": {
+      "states": 16,
+      "transitions": 18,
+      "final_states": 1,
+      "deadlock_states": 0,
+      "truncated": false
+    },
+    "branching_bisimulation": {
+      "equivalent": false,
+      "reason": "initial states are separated by partition refinement",
+      "checked": true,
+      "blocks": 29,
+      "iterations": 4
+    },
+    "trace_samples": {
+      "reference": {
+        "count": 0,
+        "traces": [],
+        "truncated": true
+      },
+      "variant": {
+        "count": 8,
+        "traces": [
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button",
+            "Saves the Transaction"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Displays the price",
+            "Selects a save button"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button",
+            "Saves the Transaction"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Displays the price",
+            "Selects a save button"
+          ],
+          [
+            "Wants to make a general patient payment",
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button",
+            "Saves the Transaction"
+          ]
+        ],
+        "truncated": true
+      }
+    }
+  },
+  "fragments": {
+    "count": 79,
+    "affected": [
+      {
+        "id": "R08",
+        "entry": "(start)",
+        "exit": "Wants to make a general patient payment",
+        "size": 2,
+        "nodes": [
+          "Wants to make a general patient payment",
+          "<start event>"
+        ],
+        "node_ids": [
+          "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+          "92cb515c-ae81-4364-a587-772f1bcc50f5"
+        ],
+        "status": "checked",
+        "equivalent": true,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": null,
+        "states": {
+          "reference": 3,
+          "variant": 3
+        }
+      },
+      {
+        "id": "R09",
+        "entry": "Wants to make a general patient payment",
+        "exit": "Displays a general patient payment form",
+        "size": 2,
+        "nodes": [
+          "Wants to make a general patient payment",
+          "Displays a general patient payment form"
+        ],
+        "node_ids": [
+          "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+          "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+        ],
+        "status": "checked",
+        "equivalent": false,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": {
+          "direction": "variant_only",
+          "trace": [
+            "Wants to make a general patient payment"
+          ],
+          "detail": "one model accepts this completed trace, the other does not"
+        },
+        "states": {
+          "reference": 3,
+          "variant": 2
+        }
+      },
+      {
+        "id": "R55",
+        "entry": "Displays a general patient payment form",
+        "exit": "<exclusive gateway (XOR)>",
+        "size": 13,
+        "nodes": [
+          "<exclusive gateway (XOR)>",
+          "Enter the medical record ID",
+          "Displays it to the table",
+          "Displays the query results",
+          "Chooses the type of payment",
+          "Selects an add button",
+          "<exclusive gateway (XOR)>",
+          "Reads the Transaction Master database",
+          "Adds it to the list",
+          "Displays a general patient payment form",
+          "Reads the Patient and Registration Database",
+          "Enters the transaction code, transaction type, quantity",
+          "Displays the price"
+        ],
+        "node_ids": [
+          "05603d03-8106-47d8-a069-8e37915278b5",
+          "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+          "2235724b-6ca2-46d2-95a0-ab88837d316f",
+          "259b95ad-426d-4d16-8f7b-6371212aaf57",
+          "467aec19-4802-4dfb-959a-96d262adf979",
+          "65aaccf1-8026-4183-bb2c-7a5746f87b67",
+          "6bc7314b-ee04-4f16-af27-1f79dcebf3d1",
+          "883fd3b8-cdea-4fa5-bf5a-c8924b712021",
+          "b8597b55-b0fd-4a78-8049-693d8d2203c7",
+          "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+          "c9ee3cd8-78da-417a-9cf9-0edac7cbbf33",
+          "e024b86e-10e6-46f3-891a-4cf17601323b",
+          "eb1c9f06-7a54-4aff-91bb-e0594c6b655a"
+        ],
+        "status": "checked",
+        "equivalent": false,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": {
+          "direction": "variant_only",
+          "trace": [
+            "Displays it to the table",
+            "Displays the price",
+            "Enters the transaction code, transaction type, quantity"
+          ],
+          "detail": "only this model can complete the trace"
+        },
+        "states": {
+          "reference": 13,
+          "variant": 22
+        }
+      },
+      {
+        "id": "R60",
+        "entry": "<exclusive gateway (XOR)>",
+        "exit": "(end)",
+        "size": 14,
+        "nodes": [
+          "<exclusive gateway (XOR)>",
+          "Displays it to the table",
+          "Saves the Transaction",
+          "Selects a save button",
+          "Selects an add button",
+          "Prints the transaction to the printer",
+          "<exclusive gateway (XOR)>",
+          "Saves the Transaction",
+          "<exclusive gateway (XOR)>",
+          "<end event>",
+          "Adds it to the list",
+          "Enters the transaction code, transaction type, quantity",
+          "<exclusive gateway (XOR)>",
+          "Displays the price"
+        ],
+        "node_ids": [
+          "05603d03-8106-47d8-a069-8e37915278b5",
+          "2235724b-6ca2-46d2-95a0-ab88837d316f",
+          "5347b8df-2a52-44ed-9503-4f9b9d6a5243",
+          "5a51b47a-2646-4727-bfe8-11cb6cf8135a",
+          "65aaccf1-8026-4183-bb2c-7a5746f87b67",
+          "691d30ec-9bd8-420f-afc5-26b933f76c01",
+          "6bc7314b-ee04-4f16-af27-1f79dcebf3d1",
+          "89298069-ad05-4a3d-983b-b4c085ac8852",
+          "9cecd4c0-b94d-457c-99d3-52cc97ee020f",
+          "b210868a-cf5c-4157-b86e-b21d426d3851",
+          "b8597b55-b0fd-4a78-8049-693d8d2203c7",
+          "e024b86e-10e6-46f3-891a-4cf17601323b",
+          "e06571e0-a23d-405d-9bde-427856a91d60",
+          "eb1c9f06-7a54-4aff-91bb-e0594c6b655a"
+        ],
+        "status": "skipped",
+        "reason": "fragment has no entry point"
+      },
+      {
+        "id": "R66",
+        "entry": "Displays the query results",
+        "exit": "<exclusive gateway (XOR)>",
+        "size": 16,
+        "nodes": [
+          "<exclusive gateway (XOR)>",
+          "Displays it to the table",
+          "Displays the query results",
+          "Chooses the type of payment",
+          "Saves the Transaction",
+          "Selects a save button",
+          "Selects an add button",
+          "Prints the transaction to the printer",
+          "<exclusive gateway (XOR)>",
+          "Reads the Transaction Master database",
+          "Saves the Transaction",
+          "<exclusive gateway (XOR)>",
+          "Adds it to the list",
+          "Enters the transaction code, transaction type, quantity",
+          "<exclusive gateway (XOR)>",
+          "Displays the price"
+        ],
+        "node_ids": [
+          "05603d03-8106-47d8-a069-8e37915278b5",
+          "2235724b-6ca2-46d2-95a0-ab88837d316f",
+          "259b95ad-426d-4d16-8f7b-6371212aaf57",
+          "467aec19-4802-4dfb-959a-96d262adf979",
+          "5347b8df-2a52-44ed-9503-4f9b9d6a5243",
+          "5a51b47a-2646-4727-bfe8-11cb6cf8135a",
+          "65aaccf1-8026-4183-bb2c-7a5746f87b67",
+          "691d30ec-9bd8-420f-afc5-26b933f76c01",
+          "6bc7314b-ee04-4f16-af27-1f79dcebf3d1",
+          "883fd3b8-cdea-4fa5-bf5a-c8924b712021",
+          "89298069-ad05-4a3d-983b-b4c085ac8852",
+          "9cecd4c0-b94d-457c-99d3-52cc97ee020f",
+          "b8597b55-b0fd-4a78-8049-693d8d2203c7",
+          "e024b86e-10e6-46f3-891a-4cf17601323b",
+          "e06571e0-a23d-405d-9bde-427856a91d60",
+          "eb1c9f06-7a54-4aff-91bb-e0594c6b655a"
+        ],
+        "status": "checked",
+        "equivalent": false,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": {
+          "direction": "variant_only",
+          "trace": [
+            "Displays it to the table",
+            "Enters the transaction code, transaction type, quantity",
+            "Saves the Transaction",
+            "Selects a save button",
+            "Saves the Transaction"
+          ],
+          "detail": "only this model can execute the differing task and still complete"
+        },
+        "states": {
+          "reference": 17,
+          "variant": 12
+        }
+      }
+    ]
+  },
+  "fusion": {
+    "overall": "semantic_and_behavioral_change",
+    "needs_review": true,
+    "element_verdicts": [
+      {
+        "a": "Selects a save button",
+        "b": "Selects a save button",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "Saves the Transaction",
+        "b": "Saves the Down Payment information",
+        "label": "synonym",
+        "verdict": "behavioral_change",
+        "behaviour_scope": "R33",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Wants to make a general patient payment",
+        "b": "Wants to make a Down Payment transaction",
+        "label": "synonym",
+        "verdict": "non_behavioral_rename",
+        "behaviour_scope": "R08",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "Displays the price",
+        "b": "Displays patient information",
+        "label": "synonym",
+        "verdict": "behavioral_change",
+        "behaviour_scope": "R11",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Displays it to the table",
+        "b": "Displays Down Payment transaction form",
+        "label": "synonym",
+        "verdict": "behavioral_change",
+        "behaviour_scope": "R02",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Saves the Transaction",
+        "b": "Searches for patients by register number",
+        "label": "meaning_changed",
+        "verdict": "semantic_change",
+        "behaviour_scope": "R33",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Enters the transaction code, transaction type, quantity",
+        "b": "Enters Down Payment information",
+        "label": "meaning_changed",
+        "verdict": "needs_review",
+        "behaviour_scope": "whole-model",
+        "equivalent": false,
+        "needs_review": true
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "<start event>",
+        "b": "<start event>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "<end event>",
+        "b": "<end event>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "<exclusive gateway (XOR)>",
+        "b": "<exclusive gateway (XOR)>",
+        "label": "identical",
+        "verdict": "unchanged",
+        "behaviour_scope": "unchanged",
+        "equivalent": true,
+        "needs_review": false
+      },
+      {
+        "a": "Displays a general patient payment form",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Enter the medical record ID",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Displays the query results",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Reads the Patient and Registration Database",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Chooses the type of payment",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Reads the Transaction Master database",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Adds it to the list",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Selects an add button",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": "Prints the transaction to the printer",
+        "b": null,
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": null,
+        "b": "<exclusive gateway (XOR)>",
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      },
+      {
+        "a": null,
+        "b": "<exclusive gateway (XOR)>",
+        "label": "unmatched",
+        "verdict": "structural_change",
+        "behaviour_scope": "element",
+        "equivalent": false,
+        "needs_review": false
+      }
+    ],
+    "verdict_counts": {
+      "unchanged": 7,
+      "behavioral_change": 3,
+      "non_behavioral_rename": 1,
+      "semantic_change": 1,
+      "needs_review": 1,
+      "structural_change": 11
+    },
+    "operation_counts": {
+      "DELETE": 9,
+      "INSERT": 2,
+      "RENAME": 6,
+      "DELETE_FLOW": 4,
+      "INSERT_FLOW": 11
+    }
+  }
+}

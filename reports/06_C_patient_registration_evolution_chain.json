@@ -1,0 +1,1814 @@
+{
+  "mode": "C",
+  "chain": [
+    {
+      "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+      "name": "Registration of old patients",
+      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/51.Mini hospital (FO).Registration of old patients/Diagram 1.xpdl",
+      "format": "xpdl",
+      "pool": "Registration of old patients",
+      "stats": {
+        "nodes": 12,
+        "edges": 12,
+        "tasks": 8,
+        "gateways": 2,
+        "events": 2,
+        "lanes": 2
+      }
+    },
+    {
+      "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+      "name": "General new patient registration",
+      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+      "format": "xpdl",
+      "pool": "General new patient registration",
+      "stats": {
+        "nodes": 12,
+        "edges": 12,
+        "tasks": 8,
+        "gateways": 2,
+        "events": 2,
+        "lanes": 2
+      }
+    },
+    {
+      "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+      "name": "Corporate new patient registration",
+      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
+      "format": "xpdl",
+      "pool": "Corporate new patient registration",
+      "stats": {
+        "nodes": 13,
+        "edges": 13,
+        "tasks": 9,
+        "gateways": 2,
+        "events": 2,
+        "lanes": 2
+      }
+    }
+  ],
+  "steps": [
+    {
+      "index": 1,
+      "from": "Registration of old patients",
+      "to": "General new patient registration",
+      "summary": "semantic_and_behavioral_change",
+      "behavior_equivalent": false,
+      "operation_counts": {
+        "RENAME": 4,
+        "DELETE_FLOW": 3,
+        "INSERT_FLOW": 3
+      },
+      "counterexample": {
+        "direction": "reference_only",
+        "trace": [
+          "Wants to register old patients",
+          "Queries District, Subdistric, Village, and Referral",
+          "Displays a registration form",
+          "Enters the medical record ID",
+          "Reads the Patient and Insurance database",
+          "Displays the query result",
+          "Selects the register button"
+        ],
+        "detail": "only this model can execute the differing task and still complete"
+      }
+    },
+    {
+      "index": 2,
+      "from": "General new patient registration",
+      "to": "Corporate new patient registration",
+      "summary": "semantic_and_behavioral_change",
+      "behavior_equivalent": false,
+      "operation_counts": {
+        "INSERT": 1,
+        "RENAME": 1,
+        "DELETE_FLOW": 1,
+        "INSERT_FLOW": 2
+      },
+      "counterexample": {
+        "direction": "variant_only",
+        "trace": [
+          "Wants to register a new general patient",
+          "Queries District, Subdistric, Village, and Referral",
+          "Displays a registration form",
+          "Enters the patient's identity",
+          "Enter the patient's address",
+          "Enters company informationk 1",
+          "Selects the register button"
+        ],
+        "detail": "only this model can execute the differing task and still complete"
+      }
+    }
+  ],
+  "lineage": [
+    {
+      "origin": "92cb515c-ae81-4364-a587-772f1bcc50f5",
+      "origin_name": "<start event>",
+      "kind": "start",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "<start event>",
+          "kind": "start"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "<start event>",
+          "kind": "start"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "<start event>",
+          "kind": "start"
+        }
+      ]
+    },
+    {
+      "origin": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+      "origin_name": "Wants to register old patients",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Wants to register old patients",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Wants to register a new general patient",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Wants to register a new corporate patient",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "b95890b5-92e4-432a-b709-a96b40733427",
+      "origin_name": "Displays the query result",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Displays the query result",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "displays the registration information to a table in the form",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "displays the registration information to a table in the form",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+      "origin_name": "Displays a registration form",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Displays a registration form",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Displays a registration form",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Displays a registration form",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "b210868a-cf5c-4157-b86e-b21d426d3851",
+      "origin_name": "<end event>",
+      "kind": "end",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "<end event>",
+          "kind": "end"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "<end event>",
+          "kind": "end"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "<end event>",
+          "kind": "end"
+        }
+      ]
+    },
+    {
+      "origin": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+      "origin_name": "Enters the medical record ID",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Enters the medical record ID",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Enters the patient's identity",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Enters the patient's identity",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "082521f7-2373-493e-b116-ed46f8443646",
+      "origin_name": "Reads the Patient and Insurance database",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Reads the Patient and Insurance database",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Enter the patient's address",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Enter the patient's address",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "6fe753e9-ea2f-4694-a19f-d7585b540d01",
+      "origin_name": "<exclusive gateway (XOR)>",
+      "kind": "xor",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        }
+      ]
+    },
+    {
+      "origin": "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+      "origin_name": "Saves the registration information",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Saves the registration information",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Saves the registration information",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Saves the registration information",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "0b5b77be-75b0-45a9-bd17-b1997420ce28",
+      "origin_name": "<exclusive gateway (XOR)>",
+      "kind": "xor",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "<exclusive gateway (XOR)>",
+          "kind": "xor"
+        }
+      ]
+    },
+    {
+      "origin": "6ca283da-c642-4d6d-950c-8c3afdc9982d",
+      "origin_name": "Selects the register button",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Selects the register button",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Selects the register button",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Selects the register button",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "043e36bd-a81d-4165-a535-e7937d50a8bb",
+      "origin_name": "Queries District, Subdistric, Village, and Referral",
+      "kind": "task",
+      "history": [
+        {
+          "step": 0,
+          "model": "Registration of old patients",
+          "present": true,
+          "label": "Queries District, Subdistric, Village, and Referral",
+          "kind": "task"
+        },
+        {
+          "step": 1,
+          "model": "General new patient registration",
+          "present": true,
+          "label": "Queries District, Subdistric, Village, and Referral",
+          "kind": "task"
+        },
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Queries District, Subdistric, Village, and Referral",
+          "kind": "task"
+        }
+      ]
+    },
+    {
+      "origin": "v2:ad054e95-09a8-4909-993f-debb0aa87c8d",
+      "origin_name": "Enters company informationk 1",
+      "kind": "task",
+      "history": [
+        {
+          "step": 2,
+          "model": "Corporate new patient registration",
+          "present": true,
+          "label": "Enters company informationk 1",
+          "kind": "task"
+        }
+      ]
+    }
+  ],
+  "reverts": [],
+  "inserted": [
+    {
+      "origin": "v2:ad054e95-09a8-4909-993f-debb0aa87c8d",
+      "element": "Enters company informationk 1",
+      "kind": "task",
+      "step": "Corporate new patient registration"
+    }
+  ],
+  "deleted": [],
+  "oracle": {
+    "consistent": true,
+    "rule": "diff(V1,Vn) must agree with the composition of consecutive diffs",
+    "discrepancies": [],
+    "direct_summary": "semantic_and_behavioral_change"
+  },
+  "comparisons": [
+    {
+      "mode": "A",
+      "reference": {
+        "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+        "name": "Registration of old patients",
+        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/51.Mini hospital (FO).Registration of old patients/Diagram 1.xpdl",
+        "format": "xpdl",
+        "pool": "Registration of old patients",
+        "stats": {
+          "nodes": 12,
+          "edges": 12,
+          "tasks": 8,
+          "gateways": 2,
+          "events": 2,
+          "lanes": 2
+        }
+      },
+      "variant": {
+        "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+        "name": "General new patient registration",
+        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+        "format": "xpdl",
+        "pool": "General new patient registration",
+        "stats": {
+          "nodes": 12,
+          "edges": 12,
+          "tasks": 8,
+          "gateways": 2,
+          "events": 2,
+          "lanes": 2
+        }
+      },
+      "alignment": {
+        "counts": {
+          "identical": 8,
+          "synonym": 0,
+          "meaning_changed": 4,
+          "unmatched": 0,
+          "matched": 12,
+          "needs_review": 3
+        },
+        "pairs": [
+          {
+            "a": "Displays a registration form",
+            "b": "Displays a registration form",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+            "b_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+          },
+          {
+            "a": "Queries District, Subdistric, Village, and Referral",
+            "b": "Queries District, Subdistric, Village, and Referral",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "043e36bd-a81d-4165-a535-e7937d50a8bb",
+            "b_id": "043e36bd-a81d-4165-a535-e7937d50a8bb"
+          },
+          {
+            "a": "Saves the registration information",
+            "b": "Saves the registration information",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+            "b_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d"
+          },
+          {
+            "a": "Selects the register button",
+            "b": "Selects the register button",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d",
+            "b_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          {
+            "a": "Wants to register old patients",
+            "b": "Wants to register a new general patient",
+            "label": "meaning_changed",
+            "score": 0.68,
+            "reason": "token overlap 0.67, string 0.90, sequence 0.78, domain contrast ['old'] vs ['new']",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "b_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7"
+          },
+          {
+            "a": "Enters the medical record ID",
+            "b": "Enters the patient's identity",
+            "label": "meaning_changed",
+            "score": 0.597,
+            "reason": "token overlap 0.33, string 0.83, sequence 0.55",
+            "confidence": "low",
+            "needs_review": true,
+            "llm_reason": "",
+            "a_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+            "b_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde"
+          },
+          {
+            "a": "Reads the Patient and Insurance database",
+            "b": "Enter the patient's address",
+            "label": "meaning_changed",
+            "score": 0.592,
+            "reason": "token overlap 0.29, string 0.82, sequence 0.55",
+            "confidence": "low",
+            "needs_review": true,
+            "llm_reason": "",
+            "a_id": "082521f7-2373-493e-b116-ed46f8443646",
+            "b_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6"
+          },
+          {
+            "a": "Displays the query result",
+            "b": "displays the registration information to a table in the form",
+            "label": "meaning_changed",
+            "score": 0.583,
+            "reason": "token overlap 0.25, string 0.81, sequence 0.42",
+            "confidence": "low",
+            "needs_review": true,
+            "llm_reason": "",
+            "a_id": "b95890b5-92e4-432a-b709-a96b40733427",
+            "b_id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979"
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "structural context 1.00, degree 1.00",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "6fe753e9-ea2f-4694-a19f-d7585b540d01",
+            "b_id": "6fe753e9-ea2f-4694-a19f-d7585b540d01"
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "score": 0.4,
+            "reason": "structural context 0.00, degree 1.00",
+            "confidence": "medium",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28",
+            "b_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28"
+          },
+          {
+            "a": "<start event>",
+            "b": "<start event>",
+            "label": "identical",
+            "score": 0.4,
+            "reason": "structural context 0.00, degree 1.00",
+            "confidence": "medium",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "92cb515c-ae81-4364-a587-772f1bcc50f5",
+            "b_id": "92cb515c-ae81-4364-a587-772f1bcc50f5"
+          },
+          {
+            "a": "<end event>",
+            "b": "<end event>",
+            "label": "identical",
+            "score": 0.4,
+            "reason": "structural context 0.00, degree 1.00",
+            "confidence": "medium",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "b210868a-cf5c-4157-b86e-b21d426d3851",
+            "b_id": "b210868a-cf5c-4157-b86e-b21d426d3851"
+          }
+        ]
+      },
+      "operations": [
+        {
+          "op": "RENAME",
+          "element": "node",
+          "before": {
+            "id": "082521f7-2373-493e-b116-ed46f8443646",
+            "name": "Reads the Patient and Insurance database",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "System"
+          },
+          "after": {
+            "id": "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+            "name": "Enter the patient's address",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "detail": "\"Reads the Patient and Insurance database\" -> \"Enter the patient's address\"",
+          "label": "meaning_changed",
+          "score": 0.592,
+          "confidence": "low",
+          "needs_review": true
+        },
+        {
+          "op": "RENAME",
+          "element": "node",
+          "before": {
+            "id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+            "name": "Enters the medical record ID",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "after": {
+            "id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+            "name": "Enters the patient's identity",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "detail": "\"Enters the medical record ID\" -> \"Enters the patient's identity\"",
+          "label": "meaning_changed",
+          "score": 0.597,
+          "confidence": "low",
+          "needs_review": true
+        },
+        {
+          "op": "RENAME",
+          "element": "node",
+          "before": {
+            "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "name": "Wants to register old patients",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "after": {
+            "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "name": "Wants to register a new general patient",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "detail": "\"Wants to register old patients\" -> \"Wants to register a new general patient\"",
+          "label": "meaning_changed",
+          "score": 0.68,
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "RENAME",
+          "element": "node",
+          "before": {
+            "id": "b95890b5-92e4-432a-b709-a96b40733427",
+            "name": "Displays the query result",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "System"
+          },
+          "after": {
+            "id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979",
+            "name": "displays the registration information to a table in the form",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "System"
+          },
+          "detail": "\"Displays the query result\" -> \"displays the registration information to a table in the form\"",
+          "label": "meaning_changed",
+          "score": 0.583,
+          "confidence": "low",
+          "needs_review": true
+        },
+        {
+          "op": "DELETE_FLOW",
+          "element": "flow",
+          "before": {
+            "source": "Displays the query result",
+            "target": "Selects the register button",
+            "source_id": "b95890b5-92e4-432a-b709-a96b40733427",
+            "target_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          "after": null,
+          "detail": "flow removed (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "DELETE_FLOW",
+          "element": "flow",
+          "before": {
+            "source": "Reads the Patient and Insurance database",
+            "target": "Displays the query result",
+            "source_id": "082521f7-2373-493e-b116-ed46f8443646",
+            "target_id": "b95890b5-92e4-432a-b709-a96b40733427"
+          },
+          "after": null,
+          "detail": "flow removed (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "DELETE_FLOW",
+          "element": "flow",
+          "before": {
+            "source": "Saves the registration information",
+            "target": "<exclusive gateway (XOR)>",
+            "source_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+            "target_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28"
+          },
+          "after": null,
+          "detail": "flow removed (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "INSERT_FLOW",
+          "element": "flow",
+          "before": null,
+          "after": {
+            "source": "Enter the patient's address",
+            "target": "Selects the register button",
+            "source_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+            "target_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          "detail": "flow added (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "INSERT_FLOW",
+          "element": "flow",
+          "before": null,
+          "after": {
+            "source": "Saves the registration information",
+            "target": "displays the registration information to a table in the form",
+            "source_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+            "target_id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979"
+          },
+          "detail": "flow added (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "INSERT_FLOW",
+          "element": "flow",
+          "before": null,
+          "after": {
+            "source": "displays the registration information to a table in the form",
+            "target": "<exclusive gateway (XOR)>",
+            "source_id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979",
+            "target_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28"
+          },
+          "detail": "flow added (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        }
+      ],
+      "behavior": {
+        "equivalent": false,
+        "inconclusive": false,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": {
+          "direction": "reference_only",
+          "trace": [
+            "Wants to register old patients",
+            "Queries District, Subdistric, Village, and Referral",
+            "Displays a registration form",
+            "Enters the medical record ID",
+            "Reads the Patient and Insurance database",
+            "Displays the query result",
+            "Selects the register button"
+          ],
+          "detail": "only this model can execute the differing task and still complete"
+        },
+        "dfa_states": {
+          "reference": 9,
+          "variant": 9
+        },
+        "truncated": false,
+        "reference_lts": {
+          "states": 13,
+          "transitions": 13,
+          "final_states": 1,
+          "deadlock_states": 0,
+          "truncated": false
+        },
+        "variant_lts": {
+          "states": 13,
+          "transitions": 13,
+          "final_states": 1,
+          "deadlock_states": 0,
+          "truncated": false
+        },
+        "branching_bisimulation": {
+          "equivalent": false,
+          "reason": "initial states are separated by partition refinement",
+          "checked": true,
+          "blocks": 20,
+          "iterations": 7
+        },
+        "trace_samples": {
+          "reference": {
+            "count": 2,
+            "traces": [
+              [
+                "Wants to register old patients",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the medical record ID",
+                "Reads the Patient and Insurance database",
+                "Displays the query result",
+                "Selects the register button"
+              ],
+              [
+                "Wants to register old patients",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the medical record ID",
+                "Reads the Patient and Insurance database",
+                "Displays the query result",
+                "Selects the register button",
+                "Saves the registration information"
+              ]
+            ],
+            "truncated": false
+          },
+          "variant": {
+            "count": 2,
+            "traces": [
+              [
+                "Wants to register old patients",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the medical record ID",
+                "Reads the Patient and Insurance database",
+                "Selects the register button"
+              ],
+              [
+                "Wants to register old patients",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the medical record ID",
+                "Reads the Patient and Insurance database",
+                "Selects the register button",
+                "Saves the registration information",
+                "Displays the query result"
+              ]
+            ],
+            "truncated": false
+          }
+        }
+      },
+      "fragments": {
+        "count": 46,
+        "affected": [
+          {
+            "id": "R08",
+            "entry": "(start)",
+            "exit": "Queries District, Subdistric, Village, and Referral",
+            "size": 3,
+            "nodes": [
+              "Queries District, Subdistric, Village, and Referral",
+              "Wants to register old patients",
+              "<start event>"
+            ],
+            "node_ids": [
+              "043e36bd-a81d-4165-a535-e7937d50a8bb",
+              "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+              "92cb515c-ae81-4364-a587-772f1bcc50f5"
+            ],
+            "status": "checked",
+            "equivalent": true,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": null,
+            "states": {
+              "reference": 4,
+              "variant": 4
+            }
+          },
+          {
+            "id": "R10",
+            "entry": "Enters the medical record ID",
+            "exit": "Displays the query result",
+            "size": 3,
+            "nodes": [
+              "Reads the Patient and Insurance database",
+              "Enters the medical record ID",
+              "Displays the query result"
+            ],
+            "node_ids": [
+              "082521f7-2373-493e-b116-ed46f8443646",
+              "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+              "b95890b5-92e4-432a-b709-a96b40733427"
+            ],
+            "status": "checked",
+            "equivalent": false,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": {
+              "direction": "variant_only",
+              "trace": [
+                "Displays the query result",
+                "Enters the medical record ID",
+                "Reads the Patient and Insurance database"
+              ],
+              "detail": "only this model can execute the differing task and still complete"
+            },
+            "states": {
+              "reference": 4,
+              "variant": 6
+            }
+          },
+          {
+            "id": "R11",
+            "entry": "Displays a registration form",
+            "exit": "Reads the Patient and Insurance database",
+            "size": 3,
+            "nodes": [
+              "Reads the Patient and Insurance database",
+              "Enters the medical record ID",
+              "Displays a registration form"
+            ],
+            "node_ids": [
+              "082521f7-2373-493e-b116-ed46f8443646",
+              "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+              "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+            ],
+            "status": "checked",
+            "equivalent": true,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": null,
+            "states": {
+              "reference": 4,
+              "variant": 4
+            }
+          },
+          {
+            "id": "R12",
+            "entry": "Reads the Patient and Insurance database",
+            "exit": "Selects the register button",
+            "size": 3,
+            "nodes": [
+              "Reads the Patient and Insurance database",
+              "Selects the register button",
+              "Displays the query result"
+            ],
+            "node_ids": [
+              "082521f7-2373-493e-b116-ed46f8443646",
+              "6ca283da-c642-4d6d-950c-8c3afdc9982d",
+              "b95890b5-92e4-432a-b709-a96b40733427"
+            ],
+            "status": "checked",
+            "equivalent": false,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": {
+              "direction": "variant_only",
+              "trace": [
+                "Displays the query result",
+                "Reads the Patient and Insurance database",
+                "Selects the register button"
+              ],
+              "detail": "only this model can execute the differing task and still complete"
+            },
+            "states": {
+              "reference": 4,
+              "variant": 6
+            }
+          },
+          {
+            "id": "R26",
+            "entry": "Displays the query result",
+            "exit": "<exclusive gateway (XOR)>",
+            "size": 5,
+            "nodes": [
+              "<exclusive gateway (XOR)>",
+              "Saves the registration information",
+              "Selects the register button",
+              "<exclusive gateway (XOR)>",
+              "Displays the query result"
+            ],
+            "node_ids": [
+              "0b5b77be-75b0-45a9-bd17-b1997420ce28",
+              "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+              "6ca283da-c642-4d6d-950c-8c3afdc9982d",
+              "6fe753e9-ea2f-4694-a19f-d7585b540d01",
+              "b95890b5-92e4-432a-b709-a96b40733427"
+            ],
+            "status": "checked",
+            "equivalent": false,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": {
+              "direction": "reference_only",
+              "trace": [
+                "Displays the query result",
+                "Selects the register button"
+              ],
+              "detail": "only this model can execute the differing task and still complete"
+            },
+            "states": {
+              "reference": 6,
+              "variant": 6
+            }
+          }
+        ]
+      },
+      "fusion": {
+        "overall": "semantic_and_behavioral_change",
+        "needs_review": true,
+        "element_verdicts": [
+          {
+            "a": "Displays a registration form",
+            "b": "Displays a registration form",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Queries District, Subdistric, Village, and Referral",
+            "b": "Queries District, Subdistric, Village, and Referral",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Saves the registration information",
+            "b": "Saves the registration information",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Selects the register button",
+            "b": "Selects the register button",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Wants to register old patients",
+            "b": "Wants to register a new general patient",
+            "label": "meaning_changed",
+            "verdict": "semantic_change",
+            "behaviour_scope": "R08",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Enters the medical record ID",
+            "b": "Enters the patient's identity",
+            "label": "meaning_changed",
+            "verdict": "needs_review",
+            "behaviour_scope": "R11",
+            "equivalent": true,
+            "needs_review": true
+          },
+          {
+            "a": "Reads the Patient and Insurance database",
+            "b": "Enter the patient's address",
+            "label": "meaning_changed",
+            "verdict": "needs_review",
+            "behaviour_scope": "R10",
+            "equivalent": false,
+            "needs_review": true
+          },
+          {
+            "a": "Displays the query result",
+            "b": "displays the registration information to a table in the form",
+            "label": "meaning_changed",
+            "verdict": "needs_review",
+            "behaviour_scope": "R12",
+            "equivalent": false,
+            "needs_review": true
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<start event>",
+            "b": "<start event>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<end event>",
+            "b": "<end event>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          }
+        ],
+        "verdict_counts": {
+          "unchanged": 8,
+          "semantic_change": 1,
+          "needs_review": 3
+        },
+        "operation_counts": {
+          "RENAME": 4,
+          "DELETE_FLOW": 3,
+          "INSERT_FLOW": 3
+        }
+      }
+    },
+    {
+      "mode": "A",
+      "reference": {
+        "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+        "name": "General new patient registration",
+        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+        "format": "xpdl",
+        "pool": "General new patient registration",
+        "stats": {
+          "nodes": 12,
+          "edges": 12,
+          "tasks": 8,
+          "gateways": 2,
+          "events": 2,
+          "lanes": 2
+        }
+      },
+      "variant": {
+        "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
+        "name": "Corporate new patient registration",
+        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
+        "format": "xpdl",
+        "pool": "Corporate new patient registration",
+        "stats": {
+          "nodes": 13,
+          "edges": 13,
+          "tasks": 9,
+          "gateways": 2,
+          "events": 2,
+          "lanes": 2
+        }
+      },
+      "alignment": {
+        "counts": {
+          "identical": 11,
+          "synonym": 0,
+          "meaning_changed": 1,
+          "unmatched": 1,
+          "matched": 12,
+          "needs_review": 0
+        },
+        "pairs": [
+          {
+            "a": "Displays a registration form",
+            "b": "Displays a registration form",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646",
+            "b_id": "baf5345e-3bb0-4235-bb5f-c58fa8217646"
+          },
+          {
+            "a": "displays the registration information to a table in the form",
+            "b": "displays the registration information to a table in the form",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979",
+            "b_id": "f7482e00-afc0-4fea-9c4d-d2f4d49e4979"
+          },
+          {
+            "a": "Enter the patient's address",
+            "b": "Enter the patient's address",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+            "b_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6"
+          },
+          {
+            "a": "Enters the patient's identity",
+            "b": "Enters the patient's identity",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+            "b_id": "0a7a1082-affb-4bc8-bfb1-91f073d72dde"
+          },
+          {
+            "a": "Queries District, Subdistric, Village, and Referral",
+            "b": "Queries District, Subdistric, Village, and Referral",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "043e36bd-a81d-4165-a535-e7937d50a8bb",
+            "b_id": "043e36bd-a81d-4165-a535-e7937d50a8bb"
+          },
+          {
+            "a": "Saves the registration information",
+            "b": "Saves the registration information",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d",
+            "b_id": "182f3051-6a79-4bd7-9d43-5f909cabb42d"
+          },
+          {
+            "a": "Selects the register button",
+            "b": "Selects the register button",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "exact normalised label",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d",
+            "b_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          {
+            "a": "Wants to register a new general patient",
+            "b": "Wants to register a new corporate patient",
+            "label": "meaning_changed",
+            "score": 0.68,
+            "reason": "token overlap 0.80, string 0.92, sequence 0.85, domain contrast ['general'] vs ['corporate']",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "b_id": "8d8ff637-b07c-4252-a38a-d6864657c6a7"
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "structural context 1.00, degree 1.00",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28",
+            "b_id": "0b5b77be-75b0-45a9-bd17-b1997420ce28"
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "score": 1.0,
+            "reason": "structural context 1.00, degree 1.00",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "6fe753e9-ea2f-4694-a19f-d7585b540d01",
+            "b_id": "6fe753e9-ea2f-4694-a19f-d7585b540d01"
+          },
+          {
+            "a": "<start event>",
+            "b": "<start event>",
+            "label": "identical",
+            "score": 0.4,
+            "reason": "structural context 0.00, degree 1.00",
+            "confidence": "medium",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "92cb515c-ae81-4364-a587-772f1bcc50f5",
+            "b_id": "92cb515c-ae81-4364-a587-772f1bcc50f5"
+          },
+          {
+            "a": "<end event>",
+            "b": "<end event>",
+            "label": "identical",
+            "score": 0.4,
+            "reason": "structural context 0.00, degree 1.00",
+            "confidence": "medium",
+            "needs_review": false,
+            "llm_reason": "",
+            "a_id": "b210868a-cf5c-4157-b86e-b21d426d3851",
+            "b_id": "b210868a-cf5c-4157-b86e-b21d426d3851"
+          },
+          {
+            "a": null,
+            "b": "Enters company informationk 1",
+            "label": "unmatched",
+            "score": 0.0,
+            "reason": "",
+            "confidence": "high",
+            "needs_review": false,
+            "llm_reason": "",
+            "b_id": "ad054e95-09a8-4909-993f-debb0aa87c8d"
+          }
+        ]
+      },
+      "operations": [
+        {
+          "op": "INSERT",
+          "element": "node",
+          "before": null,
+          "after": {
+            "id": "ad054e95-09a8-4909-993f-debb0aa87c8d",
+            "name": "Enters company informationk 1",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "detail": "added task",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "RENAME",
+          "element": "node",
+          "before": {
+            "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "name": "Wants to register a new general patient",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "after": {
+            "id": "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+            "name": "Wants to register a new corporate patient",
+            "kind": "task",
+            "kind_label": "task",
+            "lane": "FO"
+          },
+          "detail": "\"Wants to register a new general patient\" -> \"Wants to register a new corporate patient\"",
+          "label": "meaning_changed",
+          "score": 0.68,
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "DELETE_FLOW",
+          "element": "flow",
+          "before": {
+            "source": "Enter the patient's address",
+            "target": "Selects the register button",
+            "source_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+            "target_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          "after": null,
+          "detail": "flow removed (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "INSERT_FLOW",
+          "element": "flow",
+          "before": null,
+          "after": {
+            "source": "Enter the patient's address",
+            "target": "Enters company informationk 1",
+            "source_id": "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+            "target_id": "ad054e95-09a8-4909-993f-debb0aa87c8d"
+          },
+          "detail": "flow added (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "op": "INSERT_FLOW",
+          "element": "flow",
+          "before": null,
+          "after": {
+            "source": "Enters company informationk 1",
+            "target": "Selects the register button",
+            "source_id": "ad054e95-09a8-4909-993f-debb0aa87c8d",
+            "target_id": "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+          },
+          "detail": "flow added (1x)",
+          "label": "unmatched",
+          "confidence": "high",
+          "needs_review": false
+        }
+      ],
+      "behavior": {
+        "equivalent": false,
+        "inconclusive": false,
+        "method": "trace_equivalence (tau-closure + subset construction)",
+        "counterexample": {
+          "direction": "variant_only",
+          "trace": [
+            "Wants to register a new general patient",
+            "Queries District, Subdistric, Village, and Referral",
+            "Displays a registration form",
+            "Enters the patient's identity",
+            "Enter the patient's address",
+            "Enters company informationk 1",
+            "Selects the register button"
+          ],
+          "detail": "only this model can execute the differing task and still complete"
+        },
+        "dfa_states": {
+          "reference": 9,
+          "variant": 10
+        },
+        "truncated": false,
+        "reference_lts": {
+          "states": 13,
+          "transitions": 13,
+          "final_states": 1,
+          "deadlock_states": 0,
+          "truncated": false
+        },
+        "variant_lts": {
+          "states": 14,
+          "transitions": 14,
+          "final_states": 1,
+          "deadlock_states": 0,
+          "truncated": false
+        },
+        "branching_bisimulation": {
+          "equivalent": false,
+          "reason": "initial states are separated by partition refinement",
+          "checked": true,
+          "blocks": 17,
+          "iterations": 7
+        },
+        "trace_samples": {
+          "reference": {
+            "count": 2,
+            "traces": [
+              [
+                "Wants to register a new general patient",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the patient's identity",
+                "Enter the patient's address",
+                "Selects the register button"
+              ],
+              [
+                "Wants to register a new general patient",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the patient's identity",
+                "Enter the patient's address",
+                "Selects the register button",
+                "Saves the registration information",
+                "displays the registration information to a table in the form"
+              ]
+            ],
+            "truncated": false
+          },
+          "variant": {
+            "count": 2,
+            "traces": [
+              [
+                "Wants to register a new general patient",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the patient's identity",
+                "Enter the patient's address",
+                "Enters company informationk 1",
+                "Selects the register button"
+              ],
+              [
+                "Wants to register a new general patient",
+                "Queries District, Subdistric, Village, and Referral",
+                "Displays a registration form",
+                "Enters the patient's identity",
+                "Enter the patient's address",
+                "Enters company informationk 1",
+                "Selects the register button",
+                "Saves the registration information",
+                "displays the registration information to a table in the form"
+              ]
+            ],
+            "truncated": false
+          }
+        }
+      },
+      "fragments": {
+        "count": 38,
+        "affected": [
+          {
+            "id": "R02",
+            "entry": "Enters the patient's identity",
+            "exit": "Enter the patient's address",
+            "size": 2,
+            "nodes": [
+              "Enters the patient's identity",
+              "Enter the patient's address"
+            ],
+            "node_ids": [
+              "0a7a1082-affb-4bc8-bfb1-91f073d72dde",
+              "60a134a2-21b0-471e-99c9-976a90b0d9e6"
+            ],
+            "status": "checked",
+            "equivalent": true,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": null,
+            "states": {
+              "reference": 3,
+              "variant": 3
+            }
+          },
+          {
+            "id": "R05",
+            "entry": "Enter the patient's address",
+            "exit": "Selects the register button",
+            "size": 2,
+            "nodes": [
+              "Enter the patient's address",
+              "Selects the register button"
+            ],
+            "node_ids": [
+              "60a134a2-21b0-471e-99c9-976a90b0d9e6",
+              "6ca283da-c642-4d6d-950c-8c3afdc9982d"
+            ],
+            "status": "checked",
+            "equivalent": false,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": {
+              "direction": "variant_only",
+              "trace": [
+                "Enter the patient's address",
+                "Enters company informationk 1",
+                "Selects the register button"
+              ],
+              "detail": "only this model can execute the differing task and still complete"
+            },
+            "states": {
+              "reference": 3,
+              "variant": 4
+            }
+          },
+          {
+            "id": "R08",
+            "entry": "(start)",
+            "exit": "Queries District, Subdistric, Village, and Referral",
+            "size": 3,
+            "nodes": [
+              "Queries District, Subdistric, Village, and Referral",
+              "Wants to register a new general patient",
+              "<start event>"
+            ],
+            "node_ids": [
+              "043e36bd-a81d-4165-a535-e7937d50a8bb",
+              "8d8ff637-b07c-4252-a38a-d6864657c6a7",
+              "92cb515c-ae81-4364-a587-772f1bcc50f5"
+            ],
+            "status": "checked",
+            "equivalent": true,
+            "method": "trace_equivalence (tau-closure + subset construction)",
+            "counterexample": null,
+            "states": {
+              "reference": 4,
+              "variant": 4
+            }
+          }
+        ]
+      },
+      "fusion": {
+        "overall": "semantic_and_behavioral_change",
+        "needs_review": false,
+        "element_verdicts": [
+          {
+            "a": "Displays a registration form",
+            "b": "Displays a registration form",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "displays the registration information to a table in the form",
+            "b": "displays the registration information to a table in the form",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Enter the patient's address",
+            "b": "Enter the patient's address",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Enters the patient's identity",
+            "b": "Enters the patient's identity",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Queries District, Subdistric, Village, and Referral",
+            "b": "Queries District, Subdistric, Village, and Referral",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Saves the registration information",
+            "b": "Saves the registration information",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Selects the register button",
+            "b": "Selects the register button",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "Wants to register a new general patient",
+            "b": "Wants to register a new corporate patient",
+            "label": "meaning_changed",
+            "verdict": "semantic_change",
+            "behaviour_scope": "R08",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<exclusive gateway (XOR)>",
+            "b": "<exclusive gateway (XOR)>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<start event>",
+            "b": "<start event>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": "<end event>",
+            "b": "<end event>",
+            "label": "identical",
+            "verdict": "unchanged",
+            "behaviour_scope": "unchanged",
+            "equivalent": true,
+            "needs_review": false
+          },
+          {
+            "a": null,
+            "b": "Enters company informationk 1",
+            "label": "unmatched",
+            "verdict": "structural_change",
+            "behaviour_scope": "element",
+            "equivalent": false,
+            "needs_review": false
+          }
+        ],
+        "verdict_counts": {
+          "unchanged": 11,
+          "semantic_change": 1,
+          "structural_change": 1
+        },
+        "operation_counts": {
+          "INSERT": 1,
+          "RENAME": 1,
+          "DELETE_FLOW": 1,
+          "INSERT_FLOW": 2
+        }
+      }
+    }
+  ]
+}

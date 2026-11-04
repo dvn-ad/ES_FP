@@ -1,0 +1,83 @@
+[
+  {
+    "scenario": "Old vs. new patient registration",
+    "mode": "A",
+    "description": "51 vs 52 \u00b7 old patient vs general new patient registration",
+    "models": [
+      "Registration of old patients",
+      "General new patient registration"
+    ],
+    "verdict": "semantic_and_behavioral_change",
+    "trace_equivalent": false,
+    "details": "10 operations",
+    "report": "01_A_old_vs__new_patient_registration.html"
+  },
+  {
+    "scenario": "General vs. corporate new patient registration",
+    "mode": "A",
+    "description": "52 vs 53 \u00b7 general vs corporate new patient registration",
+    "models": [
+      "General new patient registration",
+      "Corporate new patient registration"
+    ],
+    "verdict": "semantic_and_behavioral_change",
+    "trace_equivalent": false,
+    "details": "5 operations",
+    "report": "02_A_general_vs__corporate_new_patient_registration.html"
+  },
+  {
+    "scenario": "General vs. corporate inpatient registration",
+    "mode": "A",
+    "description": "54 vs 55 \u00b7 general vs corporate inpatient registration",
+    "models": [
+      "General inpatient registration",
+      "Corporate inpatient registration"
+    ],
+    "verdict": "semantic_change",
+    "trace_equivalent": true,
+    "details": "2 operations",
+    "report": "03_A_general_vs__corporate_inpatient_registration.html"
+  },
+  {
+    "scenario": "General patient cashier vs. down payment",
+    "mode": "A",
+    "description": "58 vs 59 \u00b7 general patient cashier vs down payment",
+    "models": [
+      "General patient cashier",
+      "Down payment"
+    ],
+    "verdict": "semantic_and_behavioral_change",
+    "trace_equivalent": false,
+    "details": "32 operations",
+    "report": "04_A_general_patient_cashier_vs__down_payment.html"
+  },
+  {
+    "scenario": "Patient registration family",
+    "mode": "B",
+    "description": "reference 52 vs variants 53, 54, 55",
+    "models": [
+      "General new patient registration",
+      "Corporate new patient registration",
+      "General inpatient registration",
+      "Corporate inpatient registration"
+    ],
+    "verdict": "semantic_and_behavioral_change, semantic_and_behavioral_change, semantic_and_behavioral_change",
+    "trace_equivalent": false,
+    "details": "12 core elements",
+    "report": "05_B_patient_registration_family.html"
+  },
+  {
+    "scenario": "Patient registration evolution chain",
+    "mode": "C",
+    "description": "51 -> 52 -> 53",
+    "models": [
+      "Registration of old patients",
+      "General new patient registration",
+      "Corporate new patient registration"
+    ],
+    "verdict": "semantic_and_behavioral_change -> semantic_and_behavioral_change",
+    "trace_equivalent": false,
+    "details": "0 reverts, oracle consistent=True",
+    "report": "06_C_patient_registration_evolution_chain.html"
+  }
+]

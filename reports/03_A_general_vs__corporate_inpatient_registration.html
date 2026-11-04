@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bpmndiff report</title><style>
+:root { --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#94a3b8;
+        --accent:#38bdf8; --ok:#4ade80; --warn:#fbbf24; --bad:#f87171; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.55; }
+main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+h1,h2 { line-height:1.2; }
+h1 { font-size: 1.8rem; margin-bottom: .2em; }
+h2 { margin-top: 2.2em; border-bottom: 1px solid #334155; padding-bottom: .3em; }
+.sub { color:var(--muted); margin-top:0; }
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:24px 0; }
+.card { background:var(--panel); border:1px solid #334155; border-radius:12px; padding:16px; }
+.card .label { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; }
+.card .value { font-size:1.35rem; font-weight:600; margin-top:4px; }
+.ok { color:var(--ok); } .bad { color:var(--bad); } .warn { color:var(--warn); }
+table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.92rem; }
+th,td { text-align:left; padding:9px 11px; border-bottom:1px solid #334155; vertical-align:top; }
+th { color:var(--muted); font-weight:600; background:#172033; }
+code { background:#0b1220; border:1px solid #334155; border-radius:5px; padding:1px 5px; }
+.badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:.78rem; font-weight:600; }
+.badge.ok { background:#052e16; } .badge.bad { background:#3f1212; } .badge.warn { background:#3a2c05; }
+.trace { font-family:ui-monospace, monospace; color:#cbd5e1; }
+footer { margin-top:60px; color:var(--muted); font-size:.85rem; }
+</style></head>
+<body><main><h1>General inpatient registration <span style='color:#64748b'>vs</span> Corporate inpatient registration</h1>
+<p class='sub'>Mode A · pairwise process comparison</p>
+<div class='cards'>
+<div class='card'><div class='label'>Trace equivalence</div><div class='value ok'>Equivalent</div></div>
+<div class='card'><div class='label'>Operations</div><div class='value'>2</div></div>
+<div class='card'><div class='label'>Matched elements</div><div class='value'>24</div></div>
+<div class='card'><div class='label'>Fusion verdict</div><div class='value'>semantic_change</div></div>
+</div>
+<h2>Edit script</h2>
+<table><tr><th>Operation</th><th>Element</th><th>Detail</th><th>Review</th></tr><tr><td><code>RENAME</code></td><td>Wants to register Inpatient for general patients</td><td>&quot;Wants to register Inpatient for general patients&quot; -&gt; &quot;Wants to register Inpatient for corporate patients&quot;</td><td>no</td></tr><tr><td><code>RENAME</code></td><td>Displays the registration information</td><td>&quot;Displays the registration information&quot; -&gt; &quot;Risplays the registration information&quot;</td><td>no</td></tr></table>
+<h2>Behavioural verification</h2>
+<p><span class="badge ok">EQUIVALENT</span> &nbsp; trace_equivalence (tau-closure + subset construction)</p>
+<p>Branching bisimulation: <span class="badge ok">EQUIVALENT</span> <span class='sub'>initial states are in the same partition block</span></p>
+<p class='sub'>Reference trace samples:</p><ul class='trace'>
+<li>Wants to register Inpatient for general patients -&gt; Displays an inpatient registration form -&gt; Enters the medical record ID -&gt; Reads the Patient database -&gt; Displays the query results -&gt; Includes information about the patient&#x27;s handler -&gt; Includes registration information -&gt; Selects an emergency button -&gt; Selects a register button</li>
+<li>Wants to register Inpatient for general patients -&gt; Displays an inpatient registration form -&gt; Enters the medical record ID -&gt; Reads the Patient database -&gt; Displays the query results -&gt; Includes information about the patient&#x27;s handler -&gt; Includes registration information -&gt; Selects an emergency button -&gt; Runs the emergency form -&gt; Selects a register button</li>
+</ul>
+<h2>SESE fragments</h2><p>100 regions · 2 affected</p>
+<table><tr><th>Region</th><th>Nodes</th><th>Behaviour</th><th>Counterexample</th></tr><tr><td>R18</td><td>3</td><td><span class="badge ok">EQUIVALENT</span></td><td class='trace'>(empty trace)</td></tr><tr><td>R32</td><td>5</td><td><span class="badge ok">EQUIVALENT</span></td><td class='trace'>(empty trace)</td></tr></table>
+<h2>Alignment</h2>
+<table><tr><th>Reference</th><th>Variant</th><th>Label</th><th>Score</th><th>Reason</th></tr><tr><td>Displays a list of referrals</td><td>Displays a list of referrals</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Displays an inpatient registration form</td><td>Displays an inpatient registration form</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Displays the query results</td><td>Displays the query results</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Enters the medical record ID</td><td>Enters the medical record ID</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Generates the hospitalization number</td><td>Generates the hospitalization number</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Includes information about the patient&#x27;s handler</td><td>Includes information about the patient&#x27;s handler</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Includes registration information</td><td>Includes registration information</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Reads the Patient database</td><td>Reads the Patient database</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Reads the Referral database</td><td>Reads the Referral database</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Runs the emergency form</td><td>Runs the emergency form</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Saves the registration information</td><td>Saves the registration information</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Selects a register button</td><td>Selects a register button</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Selects an emergency button</td><td>Selects an emergency button</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Selects the referral</td><td>Selects the referral</td><td><span class='badge '>identical</span></td><td>1.00</td><td>exact normalised label</td></tr><tr><td>Displays the registration information</td><td>Risplays the registration information</td><td><span class='badge '>synonym</span></td><td>0.94</td><td>token overlap 0.67, string 0.84, sequence 0.97</td></tr><tr><td>Wants to register Inpatient for general patients</td><td>Wants to register Inpatient for corporate patients</td><td><span class='badge '>meaning_changed</span></td><td>0.68</td><td>token overlap 0.80, string 0.94, sequence 0.88, domain contrast [&#x27;general&#x27;] vs [&#x27;corporate&#x27;]</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>1.00</td><td>structural context 1.00, degree 1.00</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>1.00</td><td>structural context 1.00, degree 1.00</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>1.00</td><td>structural context 1.00, degree 1.00</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>1.00</td><td>structural context 1.00, degree 1.00</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>1.00</td><td>structural context 1.00, degree 1.00</td></tr><tr><td>&lt;exclusive gateway (XOR)&gt;</td><td>&lt;exclusive gateway (XOR)&gt;</td><td><span class='badge '>identical</span></td><td>0.40</td><td>structural context 0.00, degree 1.00</td></tr><tr><td>&lt;start event&gt;</td><td>&lt;start event&gt;</td><td><span class='badge '>identical</span></td><td>0.40</td><td>structural context 0.00, degree 1.00</td></tr><tr><td>&lt;end event&gt;</td><td>&lt;end event&gt;</td><td><span class='badge '>identical</span></td><td>0.40</td><td>structural context 0.00, degree 1.00</td></tr></table><footer>Generated by bpmndiff · pure-Python BPMN/XPDL comparison prototype</footer></main></body></html>

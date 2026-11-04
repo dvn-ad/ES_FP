@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bpmndiff"
+version = "0.1.0"
+description = "Pure-Python BPMN/XPDL process comparison prototype (alignment, edit script, behavioural checks)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "ES Final Project" }]
+dependencies = []
+
+[project.scripts]
+bpmndiff = "bpmndiff.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bpmndiff*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
