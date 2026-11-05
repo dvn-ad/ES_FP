@@ -3,7 +3,7 @@
   "reference": {
     "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
     "name": "General patient cashier",
-    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/58.Mini hospital (cashier).General patient cashier/Diagram 1.xpdl",
+    "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/58.Mini hospital (cashier).General patient cashier/Diagram 1.xpdl",
     "format": "xpdl",
     "pool": "General patient cashier",
     "stats": {
@@ -18,7 +18,7 @@
   "variant": {
     "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
     "name": "Down payment",
-    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/59.Mini hospital (cashier).Down payment/Diagram 1.xpdl",
+    "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/59.Mini hospital (cashier).Down payment/Diagram 1.xpdl",
     "format": "xpdl",
     "pool": "Down payment",
     "stats": {

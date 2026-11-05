@@ -14,7 +14,7 @@ from .diff import DiffOptions, diff_models
 from .llm import get_adjudicator
 from .modes import run_mode_b, run_mode_c
 from .parsers import ParseError, load_model
-from .report import render_html, render_json, render_markdown, render_text
+from .report import render_json, render_markdown, render_text
 
 
 def _add_common_options(parser: argparse.ArgumentParser) -> None:
@@ -37,9 +37,8 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("files", nargs="+", help="two or more .bpmn/.xpdl/.xml files")
     parser.add_argument("--mode", choices=["A", "B", "C"], default="A", help="A pairwise, B reference-vs-variants, C version chain")
-    parser.add_argument("--format", choices=["text", "json", "markdown", "html"], default="text")
+    parser.add_argument("--format", choices=["text", "json", "markdown"], default="text", help="report format (default: text)")
     parser.add_argument("--out", metavar="PATH", help="write the report to a file instead of stdout")
-    parser.add_argument("--html", metavar="PATH", help="also write a standalone HTML report")
     parser.add_argument("--fail-on-change", action="store_true", help="exit with status 1 when models differ behaviourally")
     parser.add_argument(
         "--track-reverts",
@@ -100,8 +99,6 @@ def _emit(result: dict, args: argparse.Namespace) -> None:
         content = render_json(result)
     elif args.format == "markdown":
         content = render_markdown(result)
-    elif args.format == "html":
-        content = render_html(result)
     else:
         content = render_text(result)
 
@@ -110,10 +107,6 @@ def _emit(result: dict, args: argparse.Namespace) -> None:
         print(f"report written to {args.out}")
     else:
         print(content)
-
-    if args.html:
-        _write(args.html, render_html(result))
-        print(f"HTML report written to {args.html}", file=sys.stderr)
 
 
 # ---------------------------------------------------------------------------
@@ -231,7 +224,6 @@ def run_demo(dataset: Path | None = None, out_dir: Path | None = None) -> int:
 
             slug = f"{index:02d}_{mode}_{_slug(title)}"
             _write(str(output / f"{slug}.json"), render_json(result))
-            _write(str(output / f"{slug}.html"), render_html(result))
             _write(str(output / f"{slug}.md"), render_markdown(result))
 
             summary.append(
@@ -243,7 +235,7 @@ def run_demo(dataset: Path | None = None, out_dir: Path | None = None) -> int:
                     "verdict": verdict,
                     "trace_equivalent": equiv,
                     "details": details,
-                    "report": f"{slug}.html",
+                    "report": f"{slug}.md",
                 }
             )
             markdown_parts.append(
@@ -272,7 +264,7 @@ def run_demo(dataset: Path | None = None, out_dir: Path | None = None) -> int:
         markdown_parts.append(f"- Verdict: **{item['verdict']}**")
         markdown_parts.append(f"- Trace equivalent: {item['trace_equivalent']}")
         markdown_parts.append(f"- Details: {item['details']}")
-        markdown_parts.append(f"- HTML: [{item['report']}]({item['report']})\n")
+        markdown_parts.append(f"- Report: [{item['report']}]({item['report']})\n")
 
     _write(str(output / "demo_report.md"), "\n".join(markdown_parts))
     _write(str(output / "demo_summary.json"), json.dumps(summary, indent=2))

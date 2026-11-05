@@ -3,7 +3,7 @@
   "reference": {
     "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
     "name": "General new patient registration",
-    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+    "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
     "format": "xpdl",
     "pool": "General new patient registration",
     "stats": {
@@ -19,7 +19,7 @@
     {
       "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
       "name": "Corporate new patient registration",
-      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
+      "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
       "format": "xpdl",
       "pool": "Corporate new patient registration",
       "stats": {
@@ -34,7 +34,7 @@
     {
       "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
       "name": "General inpatient registration",
-      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl",
+      "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl",
       "format": "xpdl",
       "pool": "General inpatient registration",
       "stats": {
@@ -49,7 +49,7 @@
     {
       "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
       "name": "Corporate inpatient registration",
-      "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl",
+      "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl",
       "format": "xpdl",
       "pool": "Corporate inpatient registration",
       "stats": {
@@ -899,7 +899,7 @@
       "reference": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "General new patient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "General new patient registration",
         "stats": {
@@ -914,7 +914,7 @@
       "variant": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "Corporate new patient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "Corporate new patient registration",
         "stats": {
@@ -1496,7 +1496,7 @@
       "reference": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "General new patient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "General new patient registration",
         "stats": {
@@ -1511,7 +1511,7 @@
       "variant": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "General inpatient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "General inpatient registration",
         "stats": {
@@ -3104,7 +3104,7 @@
       "reference": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "General new patient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "General new patient registration",
         "stats": {
@@ -3119,7 +3119,7 @@
       "variant": {
         "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
         "name": "Corporate inpatient registration",
-        "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl",
+        "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl",
         "format": "xpdl",
         "pool": "Corporate inpatient registration",
         "stats": {

@@ -1,6 +1,6 @@
 # bpmndiff demo report
 
-Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset`
+Dataset: `/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset`
 
 | Scenario | Mode | Verdict | Trace equivalent | Details |
 |---|---|---|---|---|
@@ -20,7 +20,7 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_and_behavioral_change**
 - Trace equivalent: False
 - Details: 10 operations
-- HTML: [01_A_old_vs__new_patient_registration.html](01_A_old_vs__new_patient_registration.html)
+- Report: [01_A_old_vs__new_patient_registration.md](01_A_old_vs__new_patient_registration.md)
 
 ### General vs. corporate new patient registration
 
@@ -29,7 +29,7 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_and_behavioral_change**
 - Trace equivalent: False
 - Details: 5 operations
-- HTML: [02_A_general_vs__corporate_new_patient_registration.html](02_A_general_vs__corporate_new_patient_registration.html)
+- Report: [02_A_general_vs__corporate_new_patient_registration.md](02_A_general_vs__corporate_new_patient_registration.md)
 
 ### General vs. corporate inpatient registration
 
@@ -38,7 +38,7 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_change**
 - Trace equivalent: True
 - Details: 2 operations
-- HTML: [03_A_general_vs__corporate_inpatient_registration.html](03_A_general_vs__corporate_inpatient_registration.html)
+- Report: [03_A_general_vs__corporate_inpatient_registration.md](03_A_general_vs__corporate_inpatient_registration.md)
 
 ### General patient cashier vs. down payment
 
@@ -47,7 +47,7 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_and_behavioral_change**
 - Trace equivalent: False
 - Details: 32 operations
-- HTML: [04_A_general_patient_cashier_vs__down_payment.html](04_A_general_patient_cashier_vs__down_payment.html)
+- Report: [04_A_general_patient_cashier_vs__down_payment.md](04_A_general_patient_cashier_vs__down_payment.md)
 
 ### Patient registration family
 
@@ -56,7 +56,7 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_and_behavioral_change, semantic_and_behavioral_change, semantic_and_behavioral_change**
 - Trace equivalent: False
 - Details: 12 core elements
-- HTML: [05_B_patient_registration_family.html](05_B_patient_registration_family.html)
+- Report: [05_B_patient_registration_family.md](05_B_patient_registration_family.md)
 
 ### Patient registration evolution chain
 
@@ -65,4 +65,4 @@ Dataset: `/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Function
 - Verdict: **semantic_and_behavioral_change -> semantic_and_behavioral_change**
 - Trace equivalent: False
 - Details: 0 reverts, oracle consistent=True
-- HTML: [06_C_patient_registration_evolution_chain.html](06_C_patient_registration_evolution_chain.html)
+- Report: [06_C_patient_registration_evolution_chain.md](06_C_patient_registration_evolution_chain.md)

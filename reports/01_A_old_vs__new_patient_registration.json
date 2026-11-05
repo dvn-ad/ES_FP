@@ -3,7 +3,7 @@
   "reference": {
     "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
     "name": "Registration of old patients",
-    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/51.Mini hospital (FO).Registration of old patients/Diagram 1.xpdl",
+    "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/51.Mini hospital (FO).Registration of old patients/Diagram 1.xpdl",
     "format": "xpdl",
     "pool": "Registration of old patients",
     "stats": {
@@ -18,7 +18,7 @@
   "variant": {
     "id": "719fb5f1-29f2-4d52-b698-c3d78dafd11e",
     "name": "General new patient registration",
-    "source": "/home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
+    "source": "/home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl",
     "format": "xpdl",
     "pool": "General new patient registration",
     "stats": {

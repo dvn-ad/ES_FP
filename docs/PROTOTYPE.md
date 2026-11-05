@@ -21,7 +21,7 @@ code and the demo evidence. The user-facing guide is [`../README.md`](../README.
 | Mode B: reference vs many variants | `modes.run_mode_b()`; core / partial / inserted matrix | scenario 5: 12 core elements |
 | Mode C: version chain, lineage, reverts, transitivity oracle | `modes.run_mode_c()` | scenario 6: 13 lineages, 0 reverts, oracle consistent |
 | CLI `bpmndiff a.xpdl b.xpdl` | `bpmndiff/cli.py`, `python -m bpmndiff` | `tests/test_cli.py` |
-| Report formats | text / JSON / Markdown / standalone HTML in `report.py` | `reports/` |
+| Report formats | text / JSON / Markdown in `report.py` | `reports/` |
 
 ## 2. Pipeline walk-through (52 vs 53)
 
@@ -87,5 +87,5 @@ python3 -m bpmndiff demo --out reports
 python3 -m bpmndiff \
   "…/52.Mini hospital (FO).General new patient registration/Diagram 1.xpdl" \
   "…/53.Mini hospital (FO).Corporate new patient registration/Diagram 1.xpdl" \
-  --mode A --html reports/52_vs_53.html
+  --mode A --out reports/52_vs_53.md --format markdown
 ```

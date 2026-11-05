@@ -35,7 +35,7 @@ XPDL files).
 Requirements: Python 3.10+ (standard library only).
 
 ```bash
-# Run the bundled dataset demo (writes reports/ with HTML/Markdown/JSON)
+# Run the bundled dataset demo (writes reports/ as Markdown + JSON)
 python3 -m bpmndiff demo
 
 # Pairwise comparison
@@ -47,8 +47,8 @@ python3 -m bpmndiff ref.xpdl v1.xpdl v2.xpdl v3.xpdl --mode B
 # Version chain
 python3 -m bpmndiff v1.bpmn v2.bpmn v3.xpdl --mode C --track-reverts
 
-# Machine-readable output + standalone HTML
-python3 -m bpmndiff a.xpdl b.xpdl --format json --out diff.json --html diff.html
+# Machine-readable output
+python3 -m bpmndiff a.xpdl b.xpdl --format json --out diff.json
 ```
 
 Optional installation as a console command, in a local virtual environment:
@@ -105,16 +105,16 @@ Highlights:
   agrees with the composition 51→52→53; no reverts occur in this chain.
 
 Generated artefacts live in [`reports/`](reports/):
-`demo_report.md`, `demo_summary.json`, and per-scenario `.html`, `.md`, `.json`
-files. Each HTML report is standalone (no server, no external assets).
+`demo_report.md`, `demo_summary.json`, and per-scenario `.md` and `.json`
+files.
 
 ---
 
 ## CLI reference
 
 ```
-bpmndiff FILES... [--mode {A,B,C}] [--format {text,json,markdown,html}]
-         [--out PATH] [--html PATH] [--process ID|NAME]
+bpmndiff FILES... [--mode {A,B,C}] [--format {text,json,markdown}]
+         [--out PATH] [--process ID|NAME]
          [--max-states N] [--no-bisimulation] [--llm]
          [--threshold 0.45] [--fail-on-change]
 
@@ -132,7 +132,6 @@ bpmndiff demo [--dataset PATH] [--out DIR]
 | `--llm` | Send only ambiguous label pairs to an OpenAI-compatible endpoint. |
 | `--threshold` | Minimum label similarity for the lexical stage (default 0.45). |
 | `--fail-on-change` | Exit with status 1 when trace equivalence is `False` (CI gate). |
-| `--html` | Always write an additional standalone HTML report. |
 
 Exit codes: `0` success, `1` behavioural change with `--fail-on-change`,
 `2` parse/input error.
@@ -252,7 +251,7 @@ FP/
 │   ├── bisimulation.py    # partition-refinement behavioural check
 │   ├── diff.py            # edit script, fragment checks, fusion verdicts
 │   ├── modes.py           # Mode B matrix + Mode C lineage/oracle
-│   ├── report.py          # text / Markdown / JSON / standalone HTML
+│   ├── report.py          # text / Markdown / JSON renderers
 │   └── cli.py             # argparse CLI + dataset demo
 ├── tests/                 # 18 unittest cases (no third-party test runner)
 ├── reports/               # generated demo artefacts

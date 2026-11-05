@@ -2,8 +2,8 @@
 
 | Model | Format | Nodes | Flows | Source |
 |---|---|---|---|---|
-| Reference | xpdl | 22 | 23 | /home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/58.Mini hospital (cashier).General patient cashier/Diagram 1.xpdl |
-| Variant | xpdl | 15 | 17 | /home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/59.Mini hospital (cashier).Down payment/Diagram 1.xpdl |
+| Reference | xpdl | 22 | 23 | /home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/58.Mini hospital (cashier).General patient cashier/Diagram 1.xpdl |
+| Variant | xpdl | 15 | 17 | /home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/59.Mini hospital (cashier).Down payment/Diagram 1.xpdl |
 
 ## Edit script
 

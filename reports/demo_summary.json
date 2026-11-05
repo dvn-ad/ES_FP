@@ -10,7 +10,7 @@
     "verdict": "semantic_and_behavioral_change",
     "trace_equivalent": false,
     "details": "10 operations",
-    "report": "01_A_old_vs__new_patient_registration.html"
+    "report": "01_A_old_vs__new_patient_registration.md"
   },
   {
     "scenario": "General vs. corporate new patient registration",
@@ -23,7 +23,7 @@
     "verdict": "semantic_and_behavioral_change",
     "trace_equivalent": false,
     "details": "5 operations",
-    "report": "02_A_general_vs__corporate_new_patient_registration.html"
+    "report": "02_A_general_vs__corporate_new_patient_registration.md"
   },
   {
     "scenario": "General vs. corporate inpatient registration",
@@ -36,7 +36,7 @@
     "verdict": "semantic_change",
     "trace_equivalent": true,
     "details": "2 operations",
-    "report": "03_A_general_vs__corporate_inpatient_registration.html"
+    "report": "03_A_general_vs__corporate_inpatient_registration.md"
   },
   {
     "scenario": "General patient cashier vs. down payment",
@@ -49,7 +49,7 @@
     "verdict": "semantic_and_behavioral_change",
     "trace_equivalent": false,
     "details": "32 operations",
-    "report": "04_A_general_patient_cashier_vs__down_payment.html"
+    "report": "04_A_general_patient_cashier_vs__down_payment.md"
   },
   {
     "scenario": "Patient registration family",
@@ -64,7 +64,7 @@
     "verdict": "semantic_and_behavioral_change, semantic_and_behavioral_change, semantic_and_behavioral_change",
     "trace_equivalent": false,
     "details": "12 core elements",
-    "report": "05_B_patient_registration_family.html"
+    "report": "05_B_patient_registration_family.md"
   },
   {
     "scenario": "Patient registration evolution chain",
@@ -78,6 +78,6 @@
     "verdict": "semantic_and_behavioral_change -> semantic_and_behavioral_change",
     "trace_equivalent": false,
     "details": "0 reverts, oracle consistent=True",
-    "report": "06_C_patient_registration_evolution_chain.html"
+    "report": "06_C_patient_registration_evolution_chain.md"
   }
 ]

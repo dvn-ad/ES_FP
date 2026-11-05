@@ -2,8 +2,8 @@
 
 | Model | Format | Nodes | Flows | Source |
 |---|---|---|---|---|
-| Reference | xpdl | 24 | 26 | /home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl |
-| Variant | xpdl | 24 | 26 | /home/mendoan/Projects/College/ES/FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl |
+| Reference | xpdl | 24 | 26 | /home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/54.Mini hospital (FO).General inpatient registration/Diagram 1.xpdl |
+| Variant | xpdl | 24 | 26 | /home/mendoan/Projects/ES_FP/BPMN Diagrams Dataset of Functional Requirements/XPDL Dataset/55.Mini hospital (FO).Corporate inpatient registration/Diagram 1.xpdl |
 
 ## Edit script
 
